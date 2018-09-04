@@ -165,7 +165,7 @@ void loop(void) {
       Serial.println("Error: Invalid boiler response " + String(response, HEX));
     }   
 
-    pv = sensors.getTempCByIndex(0);
+    pv = getTemp();
     dt = (new_ts - ts) / 1000.0;
     ts = new_ts;
     if (responseStatus == OpenThermResponseStatus::SUCCESS) {
