@@ -35,7 +35,7 @@ op = 0; //PID controller output
 unsigned long ts = 0, new_ts = 0; //timestamp
 
 
-void handleInterrupt() {
+void ICACHE_RAM_ATTR handleInterrupt() {
   ot.handleInterrupt();
 }
 
